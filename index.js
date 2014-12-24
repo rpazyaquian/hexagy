@@ -1,27 +1,17 @@
 var Character = require('./character.js');
 var Trigrams = require('./trigrams.js');
 
-var YIN = false;
-var PHYS = false;
-var CLOSE = false;
+var Hexagy = {};
 
-var YANG = true;
-var MAG = true;
-var LONG = true;
+Hexagy.YIN = false;
+Hexagy.PHYS = false;
+Hexagy.CLOSE = false;
 
-var rebecca = new Character({
-  name: 'Rebecca',
-  yinYang: YANG,
-  physMag: PHYS,
-  attackRange: CLOSE
-});
+Hexagy.YANG = true;
+Hexagy.MAG = true;
+Hexagy.LONG = true;
 
-var roxanne = new Character({
-  name: 'Roxanne',
-  yinYang: YIN,
-  physMag: MAG,
-  attackRange: LONG
-});
+Hexagy.Character = Character;
+Hexagy.Trigrams = Trigrams;
 
-console.log(rebecca.status);
-console.log(roxanne.status);
+module.exports = Hexagy;
