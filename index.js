@@ -1,8 +1,13 @@
 var Character = require('./character.js');
 var Trigrams = require('./trigrams.js');
 
-var YIN, PHYS, CLOSE = false;
-var YANG, MAG, LONG = true;
+var YIN = false;
+var PHYS = false;
+var CLOSE = false;
+
+var YANG = true;
+var MAG = true;
+var LONG = true;
 
 var rebecca = new Character({
   name: 'Rebecca',
@@ -10,5 +15,3 @@ var rebecca = new Character({
   physMag: MAG,
   attackRange: CLOSE
 });
-
-console.log(Trigrams[rebecca.trigram]);

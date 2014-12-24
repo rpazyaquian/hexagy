@@ -1,4 +1,6 @@
 var Model = require('ampersand-model');
+var Trigrams = require('./trigrams.js');
+
 
 var Character = Model.extend({
   props: {
@@ -15,7 +17,8 @@ var Character = Model.extend({
         'attackRange'
       ],
       fn: function() {
-        return (((this.yinYang << 2) | this.physMag << 1) | this.attackRange);
+        var trigramValue = (((this.yinYang << 2) | this.physMag << 1) | this.attackRange)
+        return Trigrams[trigramValue];
       }
     }
   }
