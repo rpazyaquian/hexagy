@@ -28,19 +28,11 @@ var Character = Model.extend({
         'attackRange'
       ],
       fn: function() {
-        var yinYangString = {
-          false: 'yin',
-          true: 'yang'
-        };
-        var physMagString = {
-          false: 'physical',
-          true: 'magical'
-        };
-        var attackRangeString = {
-          false: 'close',
-          true: 'long'
-        };
-        var status = this.name + " is a " + yinYangString[this.yinYang] + "-aligned " + physMagString[this.physMag] + " " + attackRangeString[this.attackRange] + "-range character.";
+        var yinYangString = this.yinYang ? 'yang' : 'yin';
+        var physMagString = this.physMag ? 'magical' : 'physical';
+        var attackRangeString = this.attackRange ? 'long' : 'close';
+
+        var status = this.name + " is a " + yinYangString + "-aligned " + physMagString + " " + attackRangeString + "-range character.\nTheir element is " + this.trigram.name + " ("+ this.trigram.symbol +").";
         return status;
       }
     }
