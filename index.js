@@ -12,8 +12,16 @@ var LONG = true;
 var rebecca = new Character({
   name: 'Rebecca',
   yinYang: YANG,
-  physMag: MAG,
+  physMag: PHYS,
   attackRange: CLOSE
 });
 
+var roxanne = new Character({
+  name: 'Roxanne',
+  yinYang: YIN,
+  physMag: MAG,
+  attackRange: LONG
+});
+
 console.log(rebecca.status);
+console.log(roxanne.status);

@@ -6,7 +6,7 @@ var Character = Model.extend({
     name: 'string',
     yinYang: 'boolean',
     physMag: 'boolean',
-    attackRange: 'boolean',
+    attackRange: 'boolean'
   },
   derived: {
     trigram: {
