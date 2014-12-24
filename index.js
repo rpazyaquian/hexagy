@@ -15,3 +15,5 @@ var rebecca = new Character({
   physMag: MAG,
   attackRange: CLOSE
 });
+
+console.log(rebecca.status);
