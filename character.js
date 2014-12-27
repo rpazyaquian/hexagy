@@ -16,7 +16,7 @@ var Character = Model.extend({
         'attackRange'
       ],
       fn: function() {
-        var trigramValue = (((this.yinYang << 2) | this.physMag << 1) | this.attackRange)
+        var trigramValue = (((this.yinYang << 2) | this.attackRange << 1) | this.physMag)
         return Trigrams[trigramValue];
       }
     },
